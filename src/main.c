@@ -17,7 +17,7 @@ int main(void) {
                 case(META_COMMAND_SUCCESS):
                     break;
                 case(META_COMMAND_UNRECOGNIZED_COMMAND):
-                    printf("Command unrecognised\n");
+                    printf("Unrecognized command '%s'\n", input_buffer->buffer);
                     break;
             }
             continue;
@@ -28,7 +28,7 @@ int main(void) {
             case(PREPARE_SUCCESS):
                 break;
             case(PREPARE_UNRECOGNIZED_STATEMENT):
-                printf("Unrecognised command\n");
+                printf("Unrecognized statement '%s'\n", input_buffer->buffer);
                 continue;
         }
 
